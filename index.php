@@ -6,21 +6,25 @@
   <body>
     <?php 
     // 
-    // 
-    $credit = 1000
+    $credit = 1000;
     // 
     echo "<h1>Welcome to ".$name."!</h1>";
     echo "<h2>You have $".$credit." in your wallet.</h1>";
 
-      // php arrays are like Python dictionaries with key-value pairs
-      // example: $ArrayVariable['keyName'] = 'something';
+      //
       $products['Computer']=750;
       $products['Car']=15000;
       $products['iPhone']=1000;
       $products['Toaster']=75;
 
-      // accessing value stored in an array
-      echo "<p>A car costs ".$products['Car']."</p>";
+      // 3 Types of Loops
+        // For: set a value and repeat until value is less than another
+        // While: continue looping until something changes
+        // Foreach: keep looping for every item in an array
+      foreach($products as $key => $value){
+        echo "<p>The ".$key." costs ".$value."</p.>";
+      }
+      
 
     ?> 
   </body>
