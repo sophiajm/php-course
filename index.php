@@ -22,15 +22,24 @@
       echo "<p>The ".$key." costs ".$value."</p.>";
     }
 
-    // if statements
-
-    echo "<h2>Items you can afford</h2>";
-    
+    // 
+    echo "<h2>Items you can afford</h2>";    
     foreach($products as $key => $value){
       if($value <= $credit){
         echo "<p>".$key."</p>";
       }
-    };
+    }
+
+    // functions
+
+    // define function
+    function tax_calc($amount,$tax){
+      $calculate_tax = $amount*$tax;
+      $amount = round($amount + $calculate_tax,2);
+      return $amount;
+    }
+    // call function
+    echo tax_calc(750,0.223);
 
     ?> 
   </body>
